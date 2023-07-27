@@ -5167,6 +5167,11 @@ public class ComputerEngine implements Computer {
             }
         }
 
+        if ("com.aurora.store" == installerPackageName ||
+            "com.aurora.services" == installerPackageName) {
+            installerPackageName = "com.android.vending";
+        }
+
         updateOwnerPackageName = installSource.mUpdateOwnerPackageName;
         if (updateOwnerPackageName != null) {
             final PackageStateInternal ps = mSettings.getPackage(updateOwnerPackageName);
