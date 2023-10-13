@@ -2653,6 +2653,9 @@ public class ComputerEngine implements Computer {
         if (isSystemOrRootOrShell(callingUid)) {
             return false;
         }
+        if (UserHandle.getAppId(callingUid) == Process.PHONE_UID) {
+            return false;
+        }
         final ArraySet<PackageStateInternal> packageStates =
                 (ArraySet<PackageStateInternal>) sus.getPackageStates();
         for (int index = 0; index < packageStates.size(); index++) {
