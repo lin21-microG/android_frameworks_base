@@ -1169,6 +1169,10 @@ UnflaggedApi: android.R.dimen#system_corner_radius_xlarge:
     New API must be flagged with @FlaggedApi: field android.R.dimen.system_corner_radius_xlarge
 UnflaggedApi: android.R.dimen#system_corner_radius_xsmall:
     New API must be flagged with @FlaggedApi: field android.R.dimen.system_corner_radius_xsmall
+UnflaggedApi: android.Manifest.permission#FAKE_PACKAGE_SIGNATURE:
+    New API must be flagged with @FlaggedApi: field android.Manifest.permission.FAKE_PACKAGE_SIGNATURE
+UnflaggedApi: android.Manifest.permission_group#FAKE_PACKAGE:
+    New API must be flagged with @FlaggedApi: field android.Manifest.permission_group.FAKE_PACKAGE
 UnflaggedApi: android.accessibilityservice.AccessibilityService#OVERLAY_RESULT_INTERNAL_ERROR:
     New API must be flagged with @FlaggedApi: field android.accessibilityservice.AccessibilityService.OVERLAY_RESULT_INTERNAL_ERROR
 UnflaggedApi: android.accessibilityservice.AccessibilityService#OVERLAY_RESULT_INVALID:
