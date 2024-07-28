@@ -1585,9 +1585,16 @@ public class AppOpsManager {
      */
     public static final int OP_EMERGENCY_LOCATION = AppProtoEnums.APP_OP_EMERGENCY_LOCATION;
 
+    /**
+     * Access to other Sensors
+     *
+     * @hide
+     */
+    public static final int OP_OTHER_SENSORS = 148;
+
     /** @hide */
     @UnsupportedAppUsage(maxTargetSdk = Build.VERSION_CODES.R, trackingBug = 170729553)
-    public static final int _NUM_OP = 148;
+    public static final int _NUM_OP = 149;
 
     /**
      * All app ops represented as strings.
@@ -1741,6 +1748,7 @@ public class AppOpsManager {
             OPSTR_ARCHIVE_ICON_OVERLAY,
             OPSTR_UNARCHIVAL_CONFIRMATION,
             OPSTR_EMERGENCY_LOCATION,
+            OPSTR_OTHER_SENSORS
     })
     public @interface AppOpString {}
 
@@ -2367,6 +2375,10 @@ public class AppOpsManager {
     @SystemApi
     public static final String OPSTR_CAPTURE_CONSENTLESS_BUGREPORT_ON_USERDEBUG_BUILD =
             "android:capture_consentless_bugreport_on_userdebug_build";
+
+    /** @hide Other Sensors */
+    @SystemApi
+    public static final String OPSTR_OTHER_SENSORS = "android:other_sensors";
 
     /**
      * App op deprecated/removed.
@@ -3048,6 +3060,8 @@ public class AppOpsManager {
         // TODO(b/301150056): STOPSHIP determine how this appop should work with the permission
         new AppOpInfo.Builder(OP_EMERGENCY_LOCATION, OPSTR_EMERGENCY_LOCATION, "EMERGENCY_LOCATION")
                 .setPermission(Manifest.permission.LOCATION_BYPASS).build(),
+        new AppOpInfo.Builder(OP_OTHER_SENSORS, OPSTR_OTHER_SENSORS,
+                "OTHER_SENSORS").setDefaultMode(AppOpsManager.MODE_ALLOWED).build()
     };
 
     // The number of longs needed to form a full bitmask of app ops

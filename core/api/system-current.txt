@@ -679,6 +679,7 @@ package android.app {
     field @FlaggedApi("com.android.media.flags.enable_privileged_routing_for_media_routing_control") public static final String OPSTR_MEDIA_ROUTING_CONTROL = "android:media_routing_control";
     field public static final String OPSTR_MUTE_MICROPHONE = "android:mute_microphone";
     field public static final String OPSTR_NEIGHBORING_CELLS = "android:neighboring_cells";
+    field public static final String OPSTR_OTHER_SENSORS = "android:other_sensors";
     field public static final String OPSTR_PHONE_CALL_CAMERA = "android:phone_call_camera";
     field public static final String OPSTR_PHONE_CALL_MICROPHONE = "android:phone_call_microphone";
     field public static final String OPSTR_PLAY_AUDIO = "android:play_audio";
